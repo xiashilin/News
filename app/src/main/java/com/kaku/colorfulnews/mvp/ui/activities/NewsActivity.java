@@ -108,6 +108,12 @@ public class NewsActivity extends BaseActivity
         CircleImageView imageView = ((CircleImageView) view.findViewById(R.id.tv_img));
         if (AVUser.getCurrentUser() != null) {
             ((TextView) view.findViewById(R.id.tv_userName)).setText(AVUser.getCurrentUser().getUsername());
+            ((TextView) view.findViewById(R.id.tv_userName)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goActivity(UserInfoActivity.class);
+                }
+            });
             Picasso.with(mContext).load(AVUser.getCurrentUser().getAVFile("image") == null ? "www" : AVUser.getCurrentUser().getAVFile("image").getUrl()).into(imageView);
         } else {
             ((TextView) view.findViewById(R.id.tv_userName)).setText("点击登录");

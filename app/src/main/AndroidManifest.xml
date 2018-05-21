@@ -69,6 +69,9 @@
         <activity
             android:name="com.kaku.colorfulnews.mvp.ui.activities.HistoryActivity"
             android:theme="@style/BaseAppTheme.NoTrans"></activity>
+        <activity
+            android:name="com.kaku.colorfulnews.mvp.ui.activities.UserInfoActivity"
+            android:theme="@style/BaseAppTheme.NoTrans"></activity>
     </application>
 
 </manifest>
